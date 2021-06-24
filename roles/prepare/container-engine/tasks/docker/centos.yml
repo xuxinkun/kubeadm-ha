@@ -4,7 +4,7 @@
     file: docker-ce
     description: Docker CE Stable - $basearch
     baseurl: "{{ docker_yum_repo }}"
-    enabled: no
+    enabled: yes
     gpgcheck: no
     state: present
 

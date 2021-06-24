@@ -2,7 +2,7 @@
 # # 基础信息配置
 # # ------------------------ #
 # # 是否跳过节点物理资源校验
-# skip_verify_node: false
+skip_verify_node: true
 
 # # 代理设置，若节点不能直接访问公网，可使用下面变量设置代理。
 # http_proxy: 
@@ -54,7 +54,7 @@
 # # 容器运行时类型，可选项：containerd，docker；默认 containerd
 # container_manager: containerd
 # # Docker版本
-# docker_version: 20.10.6
+docker_version: 19.03.14
 # # containerd版本
 # Containerd 版本
 # containerd_version: 1.4.6-1
@@ -275,7 +275,7 @@
 # system_ephemeral_storage_reserved: 10G
 
 # # 默认使用kube-proxy的 'iptables' 模式，可选 'ipvs' 模式
-# kube_proxy_mode: iptables
+kube_proxy_mode: ipvs
 
 # # Kubelet 根目录
 # kubelet_root_dir: "/var/lib/kubelet"
@@ -358,7 +358,7 @@
 # network_plugins_enabled: true
 
 # # 集群网络插件，目前支持flannel, calico
-# network_plugin: "calico"
+network_plugin: "flannel"
 
 # # 设置calico 网络 backend: brid, vxlan, none
 # calico_backend: bird
@@ -439,3 +439,4 @@
 # cert_manager_cainjector_image: "{{ kube_image_repository }}/jetstack_cert-manager-cainjector:v1.1.0"
 # cert_manager_webhook_image: "{{ kube_image_repository }}/jetstack_cert-manager-webhook:v1.1.0"
 # cert_manager_controller_image: "{{ kube_image_repository }}/jetstack_cert-manager-controller:v1.1.0"
+

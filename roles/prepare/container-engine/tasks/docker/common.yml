@@ -68,8 +68,8 @@
     state: started
     enabled: yes
 
-- name: 添加当前用户到 Docker 用户组
-  user:
-    name: "{{ ansible_user }}"
-    groups: docker
-    append: yes
+#- name: 添加当前用户到 Docker 用户组
+#  user:
+#    name: "{{ ansible_user }}"
+#    groups: docker
+#    append: yes
